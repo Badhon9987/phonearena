@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Phone Finder</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google fonts roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Start Project -->
+    <section class="main-container">
+        <h2 class="fw-bold my-5 text-center">Phone Arena 📱</h2>
+
+        <!-- input section -->
+        <div class="input my-4 d-flex justify-content-center">
+            <div class="search-bar">
+                <input type="search" id="form" class="form-control" placeholder="Search..">
+            </div>
+            <button type="button" onclick="loadData()" class="btn btn-primary button"><i
+                    class="fas fa-search"></i></button>
+        </div>
+        <!-- input section end -->
+
+        <!-- search result area -->
+
+        <div class="container">
+            <h2 class="text-center fw-bold my-3" id="search-result-text"></h2>
+
+            <div class="row" id="card-area">
+                <!-- card area start
+                <div class="col-md-4">
+                    <div class="card m-4">
+                        <div class="bg-image hover-overlay ripple w-100 d-flex justify-content-center p4">
+                            <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg" class="img-fluid">
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+                            <button type="button" class="btn btn-primary" onclick="showModal()"> More Info</button>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- card area end  -->
+
+
+            </div>
+            <button type="button" class="btn btn-danger fw-bold mx-auto my-3 hidden" id="load-more"
+                onclick="loadMore()">Load More</button>
+        </div>
+        <!-- search result area end  -->
+
+        <!-- modal section start -->
+
+        <div id="modal-show" class="pop-up">
+            <div class="row pop-up-body">
+                <button type="button" onclick="clear()" class="pop-btn btn btn-danger"> <i
+                        class="fa-solid fa-xmark fs-4"></i></button>
+                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                    <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg" alt="" class="w-85">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="card-title text-center my-3 fw-bold">Apple Iphone</h2>
+                    <dl class="row details">
+                        <dt class="col-sm-3 text-primary">Release Date</dt>
+                        <dd class="col-sm-9 fw-bold">A description list is perfect for defining terms.</dd>
+                        <dt class="col-sm-3 text-primary margin-3">Main Features</dt>
+                        <dd class="col-sm-9">
+                            <ul class="list-group my-3">
+                                <li class="list-group-item me">
+                                    <span class="text-dark fw-bold">Storage :</span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, vitae natus?</p>
+                                </li>
+                                <li class="list-group-item me">
+                                    <span class="text-dark fw-bold">Chipset :</span>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, vitae natus?</p>
+                                </li>
+                            </ul>
+                        </dd>
+                        <dt class="col-sm-3 text-primary">
+                            Sensors
+                        </dt>
+                        <dd class="col-sm-9 fw-bold">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt.
+                        </dd>
+                        <dt class="col-sm-3 text-primary">Others</dt>
+                        <dd class="col-sm-9 fw-bold"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+                            fugit veritatis.</dd>
+                    </dl>
+                    <button type="button" class="btn btn-danger">Close</button>
+                </div>
+            </div>
+        </div>
+        <!-- modal section end -->
+
+
+    </section>
+    <!-- End Project -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+body{
+    background-color: white;
+    position: relative;
+    max-height: 100vh;
+}
+
+.pop-up{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    z-index: 999;
+    display: flex;
+    transform: scale(0);
+    transition: transform 0.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
+}
+.pop-up-body{
+    width: 70%;
+    margin: 10px 0px;
+    padding: 10px;
+    border: 0.5px solid rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.pop-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    width: 70px;
+}
+#card-area{
+    transition: transform 0.5s ease-in-out;
+}
+.card{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.hidden {
+    display: none;
+}
+.show{
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+.button{
+    width: 50px;
+    margin-left: 10px;
+}
+.hide{
+    overflow-x: scroll;
+}
